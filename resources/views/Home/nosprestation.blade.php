@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px; background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url({{ asset('assets/img/carousel-bg.jpg') }}) center center no-repeat;">
     <div class="row py-5">
         <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">Voir toute nos prestations</h1>
+            <h1 class="display-4 text-white animated zoomIn">Nos prestations</h1>
         </div>
     </div>
 </div>

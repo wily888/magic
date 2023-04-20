@@ -39,17 +39,21 @@
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
-            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
+            <div class="col-lg-8 text-center1 text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 15px;">
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+225 27 22 26 88 43</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>contact@alloservice.ci</small>
+                    {{-- <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+225 01 40 49 22 96</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+225 05 56 43 84 29</small>  --}}
+                    <small class="me-3 text-light"><i class="fab fa-whatsapp fw-normal " aria-hidden="true"></i> +225 07 08 88 00 48</small>
                 </div>
+                {{-- <small class="me-3 text-light d-inline-flex align-items-center" style="height: 15px;"><i class="fa fa-envelope-open me-2"></i>contact@alloservice.ci</small>  --}}
             </div>
-            <div class="col-lg-4 text-center text-lg-end">
+            <div class="col-lg-4 text-center2 text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/profile.php?id=100085672158407"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/profile.php?id=100085672158407"><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-4" href="https://www.facebook.com/profile.php?id=100085672158407"><i class="fab fa-youtube fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="{{ route('login') }}"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -60,8 +64,9 @@
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 text-white"><img class="" src="{{ asset('logo.png') }}" height="30" width="160" alt=""></h1>
+            <a href="{{ route('app_accueil') }}" class="navbar-brand">
+                {{-- <h1 class="m-0 text-white"><img class="" src="{{ asset('logo-site-as.jpg') }}" height="30" width="160" alt=""></h1> --}}
+                <h1 class="m-0 text-white"><img class="" src="{{ asset('logo1.png') }}" width="210" alt=""></h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -108,14 +113,14 @@
                 <div class="row gx-5">
                     <div class="col-lg-4 col-md-6 footer-about">
                         <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
-                            <a href="index.html" class="navbar-brand">
-                                <h1 class="m-0 text-white"> <img class="" src="{{ asset('envellope.jpg') }}" height="40" width="40" alt="">Newsletter</h1>
+                            <a href="index.html" class="navbar-brand" height="20" width="20" alt="">
+                                <h1 class="m-0 text-white"> <img class="" src="{{ asset('envellope.jpg') }}" height="30" width="30" alt="">Newsletter</h1>
                             </a>
                             <p class="mt-3 mb-4">Souscrivez à notre alerte mail pour recevoir régulièrement nos offres</p>
                             <form action="">
                                 <div class="input-group">
                                     <input type="text" class="form-control border-white p-3" placeholder="Adresse E-mail">
-                                    <button class="btn btn-dark">Inscription</button>
+                                    <button class="btn btn-dark">Enregistrer</button>
                                 </div>
                             </form>
                         </div>
@@ -127,26 +132,38 @@
                                     <h3 class="text-light mb-0">Nous contacter</h3>
                                 </div>
                                 <div class="d-flex mb-2">
-                                    <i class="bi bi-envelope-open text-primary me-2"></i>
-                                    <p class="mb-0">contact@alloservice.ci</p>
+                                    <i class="bi bi-telephone text-primary me-2"></i>
+                                    <p class="mb-0">+225 27 22 26 88 43</p>
                                 </div>
                                 <div class="d-flex mb-2">
                                     <i class="bi bi-telephone text-primary me-2"></i>
-                                    <p class="mb-0">+225 27 22 26 88 43</p>
+                                    <p class="mb-0">+225 01 40 49 22 96 </p>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-telephone text-primary me-2"></i>
+                                    <p class="mb-0">+225 05 56 43 84 29</p>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <i class="fab fa-whatsapp fw-normal text-primary me-2" aria-hidden="true"></i>
+                                    <p class="mb-0">+225 07 08 88 00 48</p>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-envelope-open text-primary me-2"></i>
+                                    <p class="mb-0">contact@alloservice.ci</p>
                                 </div>
 
                             </div>
                             <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                                 <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                    <h3 class="text-light mb-0">Liens rapide</h3>
+                                    <h3 class="text-light mb-0">Liens rapides</h3>
                                 </div>
                                 <div class="link-animated d-flex flex-column justify-content-start">
-                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
-                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Présentation</a>
-                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Nos prestations</a>
-                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Demande de prestation</a>
-                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Devenir un prestataire</a>
-                                    <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
+                                    <a class="text-light mb-2" href="{{ route('app_accueil') }}"><i class=" bi bi-arrow-right text-primary me-2"></i>Accueil</a>
+                                    <a class="text-light mb-2" href="{{ route('app_presentation') }}"><i class="bi bi-arrow-right text-primary me-2"></i>Présentation</a>
+                                    <a class="text-light mb-2" href="{{ route('app_nosprestation') }}"><i class="bi bi-arrow-right text-primary me-2"></i>Nos prestations</a>
+                                    <a class="text-light mb-2" href="{{ route('app_prestation') }} "><i class="bi bi-arrow-right text-primary me-2"></i>Demande de prestation</a>
+                                    <a class="text-light mb-2" href="{{ route('app_devenirprestataire') }}"><i class="bi bi-arrow-right text-primary me-2"></i>Devenir un prestataire</a>
+                                    <a class="text-light" href="{{ route('app_contact') }}"><i class=" bi bi-arrow-right text-primary me-2"></i>Contact</a>
 
                                 </div>
                             </div>
@@ -155,9 +172,9 @@
                                     <h3 class="text-light mb-0">Suivez-nous</h3>
                                 </div>
                                 <div class="d-flex mt-4">
-                                    <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                                    <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-youtube fw-normal"></i></a>
-                                    <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                                    <a class="btn btn-primary btn-square me-2" href="https://www.facebook.com/profile.php?id=100085672158407"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                    <a class="btn btn-primary btn-square me-2" href="https://www.facebook.com/profile.php?id=100085672158407"><i class="fab fa-youtube fw-normal"></i></a>
+                                    <a class="btn btn-primary btn-square" href="https://www.facebook.com/profile.php?id=100085672158407"><i class="fab fa-instagram fw-normal"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -170,7 +187,7 @@
                 <div class="row justify-content-end">
                     <div class="col-lg-8 col-md-6">
                         <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                            <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">www.alloservices.ci</a>. Tout droit reservé.
+                            <p class="mb-0">&copy; <a class="text-white border-bottom" href="#"></a>Copyright © 2022 | Allô Service- Services & Prestations | Tous droits réservés.
                         </div>
                     </div>
                 </div>

@@ -122,10 +122,10 @@
 
 </style>
 
-<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px; background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url({{ asset('assets/img/carousel-bg.jpg') }}) center center no-repeat;">
     <div class="row py-5">
         <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">Devenez prestataire en remplissant le formulaire ci-dessous</h1>
+            <h1 class="display-4 text-white animated zoomIn">Devenez prestataire</h1>
         </div>
     </div>
 </div>
@@ -149,7 +149,7 @@
 </div>
 @endif<br><br>
 
-<!--AFFICHER LE MESSAGE D'ERROR-->
+<!--AFFICHER LE MESSAGE ERROR-->
 @if($errors->any())
 <div class="alert alert-danger">
     <p>Oups</p> Il y a eu des problèmes avec votre entrée.<br><br>
@@ -167,10 +167,13 @@
 <form action="{{ route('store.devenir') }}" method="post" role="form" class="php-email-form" enctype="multipart/form-data" id="regForm">
     @csrf
     <div class="tab">
-        <h2>INFORMATIONS <span>PERSONNELLES</span></h2>
-        <code>
-            NB: Les champs marqués par une étoile sont obligatoires .
-        </code> <br /><br />
+        <h2 class="text-center">INFORMATIONS <span>PERSONNELLES</span></h2>
+        <h5 class="text-center">
+            <code>
+
+                NB: Les champs marqués par une étoile sont obligatoires .
+            </code> <br /><br />
+        </h5>
 
         <div class="row">
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
@@ -237,8 +240,8 @@
 
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
 
-                <label for="">Contact1 : </label> <code><span style="color:red">*</code>
-                <p><input placeholder="Contact 1" oninput="this.className = ''" name="contact1"></p>
+                <label for="">Téléphone 1 : </label> <code><span style="color:red">*</code>
+                <p><input placeholder="Téléphone 1" oninput="this.className = ''" name="contact1"></p>
             </div>
             @error('contact1')
             <span class="text-danger">{{ $message }}</span>
@@ -246,8 +249,8 @@
 
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
 
-                <label for="">Contact2 : </label>
-                <p><input type=" text" placeholder="Contact 2" oninput="this.className = ''" name="contact2"></p>
+                <label for="">Téléphone 2 : </label>
+                <p><input type=" text" placeholder="Téléphone 2" oninput="this.className = ''" name="contact2"></p>
             </div>
 
             @error('contact2')
@@ -256,7 +259,7 @@
 
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
 
-                <label for="">Whatsapp : </label> <code><span style="color:red">*</code>
+                <label for="">Whatsapp : </label>
                 <p><input placeholder="Whatsapp" oninput="this.className = ''" name="whatsapp"></p>
             </div>
 
@@ -266,7 +269,7 @@
 
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
 
-                <label for="">Adresse mail : </label> <code><span style="color:red">*</code>
+                <label for="">Adresse mail : </label>
                 <p><input placeholder="E-mail" oninput="this.className = ''" name="adresse"></p>
             </div>
 
@@ -331,11 +334,14 @@
     </div>
 
     <div class="tab">
-        <h2>INFORMATIONS <span>PROFESSIONNELLES</span></h2>
-        <code>
-            NB: Les champs marqués par une étoile sont obligatoires .
-        </code><br /><br />
+        <h2 class="text-center">INFORMATIONS <span>PROFESSIONNELLES</span></h2>
 
+        <h5 class="text-center">
+            <code>
+
+                NB: Les champs marqués par une étoile sont obligatoires .
+            </code> <br /><br />
+        </h5>
         <div class="row">
 
             <div class="col-lg-4 col-md-6 form-group mt-4 mt-md-0">
@@ -456,11 +462,13 @@
 
 
     <div class="tab">
-        <h2>AUTRES <span>INFORMATIONS</span></h2>
-        <code>
-            NB: Les champs marqués par une étoile sont obligatoires .
-        </code><br /><br />
+        <h2 class="text-center">AUTRES <span>INFORMATIONS</span></h2>
+        <h5 class="text-center">
+            <code>
 
+                NB: Les champs marqués par une étoile sont obligatoires .
+            </code> <br /><br />
+        </h5>
 
 
 

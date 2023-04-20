@@ -2,7 +2,7 @@
 
 @section("content")
 
-
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <style>
     .section-title h2 span {
         color: #3601c6;
@@ -165,10 +165,10 @@
 </style>
 
 
-<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px; background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url({{ asset('assets/img/carousel-bg.jpg') }}) center center no-repeat;">
     <div class="row py-5">
         <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">Demander une prestation en remplissant le formulaire ci-dessous</h1>
+            <h1 class="display-4 text-white animated zoomIn">Demander une prestation</h1>
         </div>
     </div>
 </div>
@@ -194,7 +194,7 @@
                 </div>
                 @endif<br><br>
 
-                <!--AFFICHER LE MESSAGE D'ERROR-->
+                <!--AFFICHER LE MESSAGE D_ERROR-->
                 @if($errors->any())
                 <div class="alert alert-danger">
                     <p>Oups</p> Il y a eu des problèmes avec votre entrée.<br><br>
@@ -208,12 +208,12 @@
                 <!--EN ERROR-->
             </div>
 
-            <h2>SELECTION <span>DU PROSPECT</span></h2>
+            <h2>VEUILLEZ REMPLIR <span>LE FORMULAIRE</span></h2>
             <p>
                 NB: Les champs marqués par une étoile sont obligatoires .
             </p>
         </div>
-        <form action="{{ route('store.prestation') }}" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
+        <form action="{{ route('store.prestation') }}" method="post" role="form" class="php-email-form" enctype="multipart/form-data" id="regForm">
             @csrf
 
             <div class="row">
@@ -280,18 +280,18 @@
                 @enderror
 
 
-                <div class="col-lg-4 col-md-6 form-group mt-3">
+                {{-- <div class="col-lg-4 col-md-6 form-group mt-3">
                     <label for="">Date de l'appel: </label>
                     <input type="date" class="form-control" name="date_appel" id="date_appel" placeholder="Précisez la date">
                 </div>
                 @error('date_appel')
                 <span class="text-danger">{{ $message }}</span>
-                @enderror
+                @enderror --}}
 
 
 
                 <div class="form-group mt-3">
-                    <label for="description_detaillee">observation</label>
+                    <label for="description_detaillee">Observation</label>
                     <textarea class="form-control" name="observation" rows="5" placeholder="Veuillez saisir une observation"></textarea>
                 </div>
                 @error('observation')
@@ -302,7 +302,7 @@
             </div>
 
 
-            <div class="text-center"><button type="submit">Valider</button></div>
+            <div class="text-center"><button type="submit">Envoyer la demande</button></div>
         </form>
     </div><br><br>
 </section>

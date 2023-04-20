@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,12 +49,15 @@ Route::get('/contact', function () {
 })->name('app_contact');
 
 
-// Route::middleware([
-//     'auth:sanctum',
-//     config('jetstream.auth_session'),
-//     'verified'
-// ])->group(function () {
-//     Route::get('/dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
-// });
+Route::get('/tabeau-de-bord', [HomeController::class, 'adminIndex'])->name("admin.index");
+
+Route::post('/store.contact', [FrontController::class, 'save_contact'])->name("store.contact");
+
+
+
+Route::get('/admin', function () {
+    return view('dashboard.admin');
+})->name('app_admin');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

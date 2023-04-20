@@ -164,10 +164,10 @@
 </style>
 
 
-<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px; background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url({{ asset('assets/img/carousel-bg.jpg') }}) center center no-repeat;">
     <div class="row py-5">
         <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">Laissez nous un méssage</h1>
+            <h1 class="display-4 text-white animated zoomIn">Laissez-nous un message</h1>
         </div>
     </div>
 </div>
@@ -193,7 +193,7 @@
                 </div>
                 @endif<br><br>
 
-                <!--AFFICHER LE MESSAGE D'ERROR-->
+                <!--AFFICHER LE MESSAGE DERROR-->
                 @if($errors->any())
                 <div class="alert alert-danger">
                     <p>Oups</p> Il y a eu des problèmes avec votre entrée.<br><br>
@@ -212,7 +212,7 @@
                 NB: Les champs marqués par une étoile sont obligatoires .
             </p>
         </div>
-        <form action="#" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
+        <form action="{{ route('store.contact') }}" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
             @csrf
 
             <div class="row">

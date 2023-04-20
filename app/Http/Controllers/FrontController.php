@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\DevenirPrestataire;
 use App\Models\DemandeDePrestation;
 use App\Http\Controllers\Controller;
+use App\Models\Contact;
 
 
 class Frontcontroller extends Controller
@@ -41,7 +42,7 @@ class Frontcontroller extends Controller
             $prestations->date_appel = $request->date_appel;
             $prestations->observation = $request->observation;
             $prestations->save();
-        return redirect()->back()->with('success', 'Votre demande à été reçu avec succès .');
+        return redirect()->back()->with('success', 'Votre demande à été reçue avec succès .');
     }
 
     public function save_devenir(Request $request){
@@ -149,6 +150,22 @@ class Frontcontroller extends Controller
             $devenirs->observation = $request->observation;
 
         $devenirs->save();
-        return redirect()->back()->with('success', 'Demande reçu avec succès .');
+        return redirect()->back()->with('success', 'Demande reçue avec succès .');
+    }
+    public function save_contact(Request $request){
+        //dd($request->all());
+        $request->validate([
+         'nom' => "required",
+        'adresse_mail' => ['required', 'string', 'email', 'max:255'],
+         'message' =>  "required",
+          ]);
+
+         $contact = new Contact();
+         $contact->nom = $request->nom;
+         $contact->adresse_mail = $request->adresse_mail;
+         $contact->message = $request->message;
+         $contact->save();
+     return redirect()->back()->with('success', 'Votre demande à été reçue avec succès .');
+
     }
 }
